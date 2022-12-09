@@ -1,6 +1,8 @@
-fetch("http://127.0.0.1:5500/bin/db.json")
-  .then((resp) => resp.json())
-  .then((json) => console.log(json));
+document.addEventListener("DOMContentLoaded", () =>{
 
-  const animalName = require("animal");
-  console.log(animalName); 
+  document.getElementById("create-task-form").addEventListener("submit",(event) =>{
+    event.preventDefault();
+    const description= document.querySelector("#new-task-description").value;
+        toDoList(description);
+
+})
